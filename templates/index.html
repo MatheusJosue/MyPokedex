@@ -1,0 +1,33 @@
+{% extends "base.html" %} {% block title %}Pokefinder{% endblock %}     
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12 bg-light">
+                <div class="container mb-3">
+                    <div class="row">
+                      <div class="col-6 offset-3 border">
+                          <img style="margin-top: 10px; margin-left: 70px;" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/bfe223cd-7af1-4610-8c78-fd850a53fc8b/d3fhokr-e97f26b5-5baa-4be5-b6e3-f226ef33fea0.gif">
+                        <form action="{{ url_for('getPokedex') }}" method="post">
+                          <label for="pokemonName" class="form-label">Pokemon Name</label>
+                          <input
+                            type="text"
+                            name="pokeName"
+                            class="form-control"
+                            aria-describedby="pokemonHelpBlock"
+                          />
+                          <div id="pokemonHelpBlock" class="form-text">Put your pokemon name</div>
+                          <div class="row">
+                            <div class="d-flex justify-content-center mb-2">
+                              <button class="btn btn-light" type="submit" value="Submit">
+                                Find
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
